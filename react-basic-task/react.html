@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage design using React</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="./react-lib/react.development.js"></script>
+    <script src="./react-lib/react-dom.development.js"></script>
+    <script>
+      // // Generate a random number between 1 and 100
+      // const randomNumber = Math.floor(Math.random() * 100) + 1;
+      // // Create a new element to display the random number
+      // const numberElement = React.createElement(
+      //   "h1",
+      //   null,
+      //   `Generated Number: ${randomNumber}`
+      // );
+
+      // const resultElement = React.createElement(
+      //   "h2",
+      //   { style: { color: "blue" } },
+      //   randomNumber % 2 === 0 ? "The number is even!" : "The number is odd!"
+      // );
+
+      // const root = ReactDOM.createRoot(document.getElementById("root"));
+      // //   root.render([numberElement, resultElement]);
+      // root.render(
+      //   React.createElement("div", { id: "childDiv" }, [
+      //     numberElement,
+      //     resultElement,
+      //   ])
+      // );
+
+      // Generate a random number between 1 and 100
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      const navbar = React.createElement(
+        "div",
+        {
+          id: "navbar",
+          // style: {
+          //   width: "100%", // full width
+          //   backgroundColor: "black",
+          //   color: "white",
+          //   padding: "15px",
+          //   display: "flex",
+          //   justifyContent: "space-between", // space out elements
+          //   alignItems: "center",
+          // },
+        },
+        [
+          React.createElement("h1", { key: "logo" }, "My Website"),
+          React.createElement("div", { key: "menu" }, [
+            React.createElement(
+              "a",
+              { href: "#", style: { margin: "0 10px", color: "white" } },
+              "Home"
+            ),
+            React.createElement(
+              "a",
+              { href: "#", style: { margin: "0 10px", color: "white" } },
+              "About"
+            ),
+            React.createElement(
+              "a",
+              { href: "#", style: { margin: "0 10px", color: "white" } },
+              "Contact"
+            ),
+          ]),
+        ]
+      );
+
+      const heroSection = React.createElement(
+        "div",
+        { id: "hero" },
+        React.createElement("img", {
+          src: "hero-img.png",
+          alt: "Hero Section",
+          style: {
+            width: "100%",
+            height: "auto",
+            maxHeight: "350px",
+            display: "block",
+            backgroundColor: "#f4f4f4",
+          },
+        })
+      );
+      root.render(
+        React.createElement(React.Fragment, null, [navbar, heroSection])
+      );
+    </script>
+  </body>
+</html>
