@@ -172,3 +172,11 @@ function fetchLocalFile1() {
   // Example: abort the request if it takes too long (not needed here, just for demo)
   // setTimeout(function() { xhr.abort(); }, 5000);
 }
+function fetchPractise() {
+  fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data); // should print array of 5 posts
+    })
+    .catch((error) => console.error("Error fetching data:", error));
+}
