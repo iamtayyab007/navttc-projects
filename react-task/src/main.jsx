@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import FunctionalComponent from "./component/FunctionalComponent.jsx";
+import LifecycleClassComponent from "./component/LifeCycleClassComponent.jsx";
 
 const firstNames = ["Tayyab", "Shoaib", "Haris", "Usama", "Junaid"];
 const lastNames = ["Khan", "Chaudhry", "Jutt", "Niazi", "Ali"]; //
@@ -17,5 +18,7 @@ createRoot(document.getElementById("root")).render(
         secondName={lastNames[index]}
       />
     ))}
+
+    <LifecycleClassComponent />
   </StrictMode>
 );
