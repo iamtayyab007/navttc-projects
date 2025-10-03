@@ -11,7 +11,7 @@ const lastNames = ["Khan", "Chaudhry", "Jutt", "Niazi", "Ali"]; //
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
-    {firstNames.map((first, index) => (
+    {/* {firstNames.map((first, index) => (
       <FunctionalComponent
         key={index}
         name={first}
@@ -19,6 +19,6 @@ createRoot(document.getElementById("root")).render(
       />
     ))}
 
-    <LifecycleClassComponent />
+    <LifecycleClassComponent /> */}
   </StrictMode>
 );
