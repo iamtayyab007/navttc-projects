@@ -3,34 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Coding Problems</title>
   </head>
   <body>
     <script>
-      // let element = 1;
-      // for (let i = 1; i <= 20; i++) {
-      //   console.log(element + "*" + i + "=" + i);
-      // }
-      // // while loop
-      // let t = parseInt(prompt("enter a number"));
-      // let i = 1;
-      // while (t <= 10) {
-      //   console.log(t + "*" + i + "=" + t);
-      //   t++;
-      // }
+      let element = 1;
+      for (let i = 1; i <= 20; i++) {
+        console.log(element + "*" + i + "=" + i);
+      }
+      // while loop
+      let t = parseInt(prompt("enter a number"));
+      let k = 1;
+      while (t <= 10) {
+        console.log(t + "*" + k + "=" + t);
+        t++;
+      }
       // check if the number is prime or not
-      // let i = 2;
-      // let g = parseInt(prompt("enter a number"));
+      let i = 2;
+      let m = parseInt(prompt("enter a number"));
 
-      // if (g < 1 && g === 1) {
-      //   console.log("number should be greater 1");
-      // } else if (g % i === 0) {
-      //   console.log("number is not a prime number");
-      // } else if (g === 2) {
-      //   console.log("number is a prime number");
-      // } else if (g % g === 0) {
-      //   console.log("number is a prime number");
-      // }
+      if (m < 1 && m === 1) {
+        console.log("number should be greater 1");
+      } else if (m % i === 0) {
+        console.log("number is not a prime number");
+      } else if (m === 2) {
+        console.log("number is a prime number");
+      } else if (m % m === 0) {
+        console.log("number is a prime number");
+      }
 
       for (let i = 1; i <= 100; i++) {
         if (i === 1 && i < 1) {
@@ -41,6 +41,87 @@
           console.log("");
         }
         console.log(i);
+      }
+
+      // Question 1: Swap numbers using the third variable
+      console.log("** Swap numbers using the third variable ***");
+      let a = 2;
+      let b = 3;
+      let c;
+
+      c = b;
+      b = a;
+      a = c;
+
+      console.log("the value of a and b is", a, b);
+
+      // Question 2: Swap numbers without variables
+      console.log("*** Swap a number without variables ***");
+      let d = 2;
+      let e = 3;
+      d = d + e; //5
+      e = d - e; //2
+      d = d - e; // 3
+
+      console.log("the value of d and e without variables", d, e);
+
+      // Question Fibonacci series
+      console.log("** fibonacci series **");
+
+      let n = 10; // number of terms to print
+      let f = 0;
+      let g = 1;
+      let result = ""; // to build the series in one line
+
+      for (let i = 0; i < n; i++) {
+        result += f; // add current number 0 1 2
+        if (i < n - 1) {
+          result += ", "; // add comma if not the last number
+        }
+
+        let next = f + g; // calculate next term // 1 2
+        f = g; // update f // 1 1
+        g = next; // update g // 1 2
+      }
+
+      console.log("Fibonacci Series:", result);
+
+      // sum of Number
+      console.log("** sum of a number **");
+      let value = 2568,
+        sum = 0;
+
+      while (value) {
+        sum += value % 10;
+        value = Math.floor(value / 10);
+      }
+
+      console.log(sum);
+
+      // find the armstrong number
+      console.log("** Finding an armstrong number **");
+      let thisValue = 153;
+      let temp = thisValue;
+      let convertIntegerToString = thisValue.toString();
+      let lengthOfInteger = convertIntegerToString.length;
+
+      const exponent = lengthOfInteger;
+      let removeValue;
+      let processingResult = 0;
+
+      for (let i = 1; i <= lengthOfInteger; i++) {
+        let sumValue = temp % 10;
+
+        processingResult += sumValue ** exponent;
+
+        removeValue = Math.floor(temp / 10);
+
+        temp = removeValue;
+      }
+      if (processingResult === thisValue) {
+        console.log(`${thisValue} is an armstrong number`);
+      } else {
+        console.log(`this number is not an armstrong number`);
       }
     </script>
   </body>
