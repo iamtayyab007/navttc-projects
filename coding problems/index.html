@@ -7,41 +7,41 @@
   </head>
   <body>
     <script>
-      let element = 1;
-      for (let i = 1; i <= 20; i++) {
-        console.log(element + "*" + i + "=" + i);
-      }
-      // while loop
-      let t = parseInt(prompt("enter a number"));
-      let k = 1;
-      while (t <= 10) {
-        console.log(t + "*" + k + "=" + t);
-        t++;
-      }
-      // check if the number is prime or not
-      let i = 2;
-      let m = parseInt(prompt("enter a number"));
+      // let element = 1;
+      // for (let i = 1; i <= 20; i++) {
+      //   console.log(element + "*" + i + "=" + i);
+      // }
+      // // while loop
+      // let t = parseInt(prompt("enter a number"));
+      // let k = 1;
+      // while (t <= 10) {
+      //   console.log(t + "*" + k + "=" + t);
+      //   t++;
+      // }
+      // // check if the number is prime or not
+      // let i = 2;
+      // let m = parseInt(prompt("enter a number"));
 
-      if (m < 1 && m === 1) {
-        console.log("number should be greater 1");
-      } else if (m % i === 0) {
-        console.log("number is not a prime number");
-      } else if (m === 2) {
-        console.log("number is a prime number");
-      } else if (m % m === 0) {
-        console.log("number is a prime number");
-      }
+      // if (m < 1 && m === 1) {
+      //   console.log("number should be greater 1");
+      // } else if (m % i === 0) {
+      //   console.log("number is not a prime number");
+      // } else if (m === 2) {
+      //   console.log("number is a prime number");
+      // } else if (m % m === 0) {
+      //   console.log("number is a prime number");
+      // }
 
-      for (let i = 1; i <= 100; i++) {
-        if (i === 1 && i < 1) {
-          console.log("");
-        } else if (i % 2 === 0) {
-          console.log("");
-        } else {
-          console.log("");
-        }
-        console.log(i);
-      }
+      // for (let i = 1; i <= 100; i++) {
+      //   if (i === 1 && i < 1) {
+      //     console.log("");
+      //   } else if (i % 2 === 0) {
+      //     console.log("");
+      //   } else {
+      //     console.log("");
+      //   }
+      //   console.log(i);
+      // }
 
       // Question 1: Swap numbers using the third variable
       console.log("** Swap numbers using the third variable ***");
@@ -123,6 +123,55 @@
       } else {
         console.log(`this number is not an armstrong number`);
       }
+
+      // Find the perfect number
+      console.log("*** Finding the perfect number ****");
+
+      // the perfect number is a number that has all the divisible evenly and the sum of these divisible is equal to the number itself is a perfect number.
+      // first of all we will identify all the divisible till the given number exclusive of itself.
+
+      let number = 496;
+      let sumOfDivisors = 0;
+      for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+          console.log(`${i}`);
+          sumOfDivisors += i;
+        }
+      }
+      if (sumOfDivisors === number) {
+        console.log(`${number} is a divisor`);
+      } else {
+        console.log(`${number} is not a divisor`);
+      }
+
+      // perform string reverse
+      console.log("*** performing string reverse");
+      let stringDemo = "this is a World";
+      let processingString = stringDemo.split("");
+      let reversedString = "";
+
+      for (let i = processingString.length - 1; i >= 0; i--) {
+        reversedString += processingString[i];
+      }
+
+      console.log("reversedString", reversedString);
+
+      // perform a number reverse
+      console.log("*** perform a number reverse");
+
+      let numberDemo = 1234;
+      let lengthOfNumberDemo = numberDemo.toString().length;
+      let tempStore = "";
+      let removeTheLast;
+      let reversedNumber;
+      console.log("number demo length", lengthOfNumberDemo);
+      for (let i = 1; i <= lengthOfNumberDemo; i++) {
+        tempStore += numberDemo % 10;
+        removeTheLast = Math.floor(numberDemo / 10);
+        numberDemo = removeTheLast;
+      }
+      reversedNumber = parseInt(tempStore);
+      console.log("reversed number", tempStore);
     </script>
   </body>
 </html>
